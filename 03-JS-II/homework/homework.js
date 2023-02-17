@@ -68,6 +68,22 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+    switch (color) {
+      case "blue":
+        return "This is blue";
+        break;
+      case "red":
+        return "This is red";
+        break;
+      case "green":
+        return "This is green";
+        break;
+      case "orange":
+        return "This is orange";
+        break;
+    default:
+        return 'Color not found';
+    }
 }
 
 function esDiezOCinco(numero) {
@@ -85,6 +101,10 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (numero < 50 && numero > 20 ) {
+    return true;
+  }
+  return false;
 }
 
 function esEntero(numero) {
@@ -111,6 +131,17 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  if (num1 > num2 && num1 > num3 && num1 > 0) {
+      return 'Número 1 es mayor y positivo';
+  } else if (num1 < -1 || num2 < -1 || num3 < -1) {
+      return 'Hay negativos';
+  } else if (num1 === 0 || num2 === 0 || num3 === 0) {
+      return 'Error';
+  } else if (num3 > num1 && num3 > num2) {
+    num3++;
+      return num3;
+  } 
+      return false;
 }
 
 function esPrimo(numero) {
@@ -138,7 +169,7 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+
 }
 
 function doWhile(numero) {
